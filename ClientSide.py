@@ -100,10 +100,8 @@ def RequestJson(uri: str="ws://localhost:8080/commands"):
     }, uri))
     return result
 
-def ResetHandsNoVR():
-    TransformHands((0, 0.025*16, 0), (0, 0, 0), (0, 0.025*16, 0), (0, 0, 0))
 
-# Controls
+## controls
 _MOVE_FWD_ = lambda: TransformAgent((0, 0, 0.1), (0, 0, 0))
 _MOVE_BCK_ = lambda: TransformAgent((0, 0, -0.1), (0, 0, 0))
 _MOVE_LEFT_ = lambda: TransformAgent((-0.1, 0, 0), (0, 0, 0))
@@ -123,7 +121,6 @@ _LWR_LEFT_ = lambda: TransformHands((0, -0.025, 0), (0, 0, 0), (0, 0, 0), (0, 0,
 _RSE_RIGHT_ = lambda: TransformHands((0, 0, 0), (0, 0, 0), (0, 0.025, 0), (0, 0, 0))
 _LWR_RIGHT_ = lambda: TransformHands((0, 0, 0), (0, 0, 0), (0, -0.025, 0), (0, 0, 0))
 _RESET_ = lambda: Reset()
-_RESET_HANDS_NO_VR_ = lambda: ResetHandsNoVR()
 _REQUEST_SCREENSHOT_ = lambda: RequestScreenshot()
 _REQUEST_ANNOTATION_ = lambda: RequestAnnotation()
 _REQUEST_JSON_ = lambda: RequestJson()
