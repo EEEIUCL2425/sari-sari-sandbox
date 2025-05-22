@@ -1,20 +1,15 @@
 # sari-sari-sandbox
-! FOR ALPHA TESTING !
 
-Sari-sari Sandbox 0.2.1
+Sari-sari Sandbox 1.0
 
-# Updates
-0.2.1
-1. Fixed bug: right hand not gripping properly
-2. Fixed bug: decal projector not showing the expiration date
-3. VR hands are lowered by 0.1 instead of 0.5
-
-0.2
-1. Forward movement is now dependent on the XR rig forward vector instead of the camera's forward vector to prevent flying when camera is rotated about x and z axes
-2. Y translation restricted to [0, 2] unity units
-3. Added hand physics so they do not pass through objects.
-4. If no VR controller detected (API mode,) VR hands are lowered by 0.5
-5. Added Reset() function in ClientSide API
+# Features
+1.0
+1. 250 retail store products
+2. 3 retail store layouts
+3. Shelf labels, price tags, and expiry dates
+3. Self-checkout counter with barcode scanning capability
+4. API to navigate and interact with the environment
+5. Hand animations when gripping and poking
 
 # To control agent through terminal:
 
@@ -46,12 +41,15 @@ Functions:
 	
 	ToggleRightGrip():
 		Toggles the grip of the right hand. Will successfully toggle from false to true if an XR Grab Interactable object collides with the right hand.
+
+	ToggleLeftPoke():
+		Toggles the poke animation of the left hand.
+
+	ToggleRightPoke():
+		Toggles the poke animation of the right hand.
 	
 	RequestScreenshot():
 		Requests a screenshot and saves the received image as "ClientScreenshot.png" in the same directory as this module.
-
-  	RequestData():
-   		Requests a plain screenshot, screenshot with bounding boxes, and bounding box coordinates.
 
 	Reset():
 		Resets the environment to its initial state with randomized grocery product placement.
